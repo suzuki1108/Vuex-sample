@@ -1,19 +1,18 @@
 <template>
-  <Todo />
-  <Profile />
+  <h2>todo store</h2>
+  <div v-for="item in todoItems" :key="item.id">
+    <p>{{ item.title }}</p>
+    <p>{{ item.content }}</p>
+    <p>{{ item.completed ? "完了" : "-" }}</p>
+  </div>
+  <button @click="fetchTodoItems">fetchTodoItems</button>
 </template>
 
 <script>
 import { computed, defineComponent } from "vue";
 import { useStore } from "vuex";
-import Todo from "./components/Todo.vue";
-import Profile from "./components/Profile.vue";
 
 export default defineComponent({
-  components: {
-    Todo,
-    Profile,
-  },
   setup() {
     const store = useStore();
 
