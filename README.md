@@ -1,7 +1,5 @@
 # vuex-sample
 
-PJにVuexを導入するため、復習
-
 参考：
 [Vuex 公式](https://vuex.vuejs.org/ja/)
 [Vuex 公式サンプル](https://github.com/vuejs/vuex/tree/main/examples/composition)
